@@ -212,9 +212,15 @@ text-transform: uppercase;
 .section{
     padding: 80px 0;
 }
+
+.section--device{
+    background: url("/assets/images/devices-bg.jpg") center no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
+}
 .section__header{
     text-align: center;
-    margin:0 auto 40px;
+    margin:0 auto 50px;
     width: 100%;
     max-width: 950px;
 }
@@ -318,6 +324,7 @@ text-align: center;
 }
 
 /* Stat */
+
 .stat{
     background-color: #95e1d3;
 }
@@ -329,8 +336,8 @@ text-align: center;
 }
 
 .stat__item{
-  padding: 90px 0;
-    width: 20%;
+  padding: 70px 25px;
+    flex: 1 1 0;
     border-left:1px solid #b0e8de ;
 }
 .stat__inner:last-child{
@@ -348,3 +355,169 @@ text-transform: uppercase;
 font-size: 14px;
 text-transform: uppercase;
 }
+
+/* Tech */
+
+
+.tech{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.tech__item{
+    position: relative;
+    width: 33.3333%;
+    padding: 0 35px 40px 85px;
+    margin-bottom: 60px;
+    
+  
+}
+
+.tech__item--border{
+    border-bottom: 1px solid #e5e5e5 ;
+}
+
+.tech__icon{
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+
+.tech__title{
+color: #333333;
+text-transform: uppercase;
+margin-bottom: 15px;
+font-weight: 700;
+}
+
+.tech__text{
+color: #999999;
+font-family: Roboto;
+font-size: 15px;
+line-height: 24px;
+text-align: left;
+
+}
+
+/* Devices */
+
+.devices{
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+}
+
+.devices__item{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.devices__item--iphone{
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    z-index: 2;
+}
+
+
+/* WeDo */
+
+
+.wedo{
+    display: flex;
+   
+}
+
+.wedo__item{
+    width: 50%;
+    
+}
+
+.wedo__item--photo{
+    max-width: 570px ;
+}
+
+/* Acord */
+
+.accord{
+
+}
+.accord__item{
+    border: 1px solid #e5e5e5;  
+}
+.accord__header{
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px 20px 15px 65px ;
+    vertical-align: top;
+    cursor: pointer;
+
+}
+.accord__header:after{
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+
+    border-top: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+
+    position: absolute;
+    top: 60%;
+    transform: translateY(-40%) rotate(-45deg);
+    right: 20px;
+    z-index: 1;
+    cursor: pointer;
+
+    transition: all .2s linear;
+    
+}
+
+
+.accord__item.active .accord__header:after{
+transform: translateY(-80%) rotate(
+133deg);
+}
+
+.accord__icon{
+    position: absolute;
+    top:50%;
+    left: 20px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+
+.accord__text{
+color: #333333;
+text-transform: uppercase;
+
+}
+.accord__content{
+
+height: 0;
+visibility: hidden;
+color: #999999;
+font-family: "Roboto";
+font-weight: 300;
+font-style: italic;
+font-size: 15px;
+line-height: 24px;
+text-align: left;
+padding: 0 20px;
+transition: height .4s linear, visibility .1s linear;
+
+}
+
+.accord__item.active .accord__content{
+    /* display: block; */
+    height: 200px;
+    visibility: visible;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
